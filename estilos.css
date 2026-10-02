@@ -1,0 +1,217 @@
+/* Musicfy - estilos basicos */
+/* Tema oscuro con colores solidos celeste y azul (sin degradados) */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+header {
+  background-color: #123a66;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.logo img {
+  border-radius: 6px;
+}
+
+#buscador {
+  flex: 1;
+  max-width: 500px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  background-color: #1a2233;
+  color: white;
+}
+
+header button {
+  background-color: #37bee6;
+  color: #0d1117;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Layout de 3 columnas */
+.contenido {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Playlists (izquierda) */
+.playlists {
+  width: 220px;
+  background-color: #10151f;
+  padding: 15px;
+  min-height: 90vh;
+  flex-shrink: 0;
+}
+
+.playlists h3 {
+  color: #37bee6;
+  margin-bottom: 10px;
+}
+
+.playlists ul {
+  list-style: none;
+  padding: 0;
+}
+
+.playlists li {
+  padding: 8px 0;
+  color: #cfd8e3;
+  border-bottom: 1px solid #1a2233;
+}
+
+/* Contenido principal */
+main {
+  flex: 1;
+  min-width: 0; /* evita que el contenido empuje al reproductor fuera de pantalla */
+  padding: 20px;
+}
+
+main h2 {
+  color: white;
+  border-left: 4px solid #195ac8;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+/* ---------- Carrusel por paginas (sin JavaScript) ---------- */
+/* Se usan radio buttons ocultos + label "for" para pasar de pagina */
+
+.carrusel {
+  margin-bottom: 30px;
+}
+
+.pagina-radio {
+  display: none;
+}
+
+.pagina {
+  display: none;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Solo se muestra la pagina cuyo radio esta seleccionado */
+#pag-c1:checked ~ #grupo-c1,
+#pag-c2:checked ~ #grupo-c2,
+#pag-c3:checked ~ #grupo-c3,
+#pag-a1:checked ~ #grupo-a1,
+#pag-a2:checked ~ #grupo-a2 {
+  display: flex;
+}
+
+.fila {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+}
+
+/* Flechas de navegacion (izquierda / derecha) */
+.flecha {
+  cursor: pointer;
+  background-color: #123a66;
+  color: white;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  user-select: none;
+}
+
+.flecha:hover {
+  background-color: #195ac8;
+}
+
+/* Tarjetas de canciones (cuadradas) - son enlaces <a> */
+.cancion {
+  background-color: #10151f;
+  padding: 10px;
+  border-radius: 6px;
+  min-width: 150px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cancion img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cancion p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.cancion:hover {
+  background-color: #1a2233;
+}
+
+/* Tarjetas de artistas (circulares) */
+.artista {
+  text-align: center;
+  min-width: 120px;
+}
+
+.artista img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.artista p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+/* Reproductor (derecha) */
+.reproductor {
+  width: 300px;
+  background-color: #10151f;
+  padding: 15px;
+  min-height: 90vh;
+  flex-shrink: 0;
+}
+
+.reproductor h3 {
+  color: #37bee6;
+  margin-bottom: 10px;
+}
+
+.reproductor p {
+  color: #cfd8e3;
+  margin-bottom: 10px;
+}
+
+#reproductor {
+  border-radius: 8px;
+}

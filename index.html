@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musicfy</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Encabezado con buscador -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.jpg" alt="Logo Musicfy" width="40">
+      <span>Musicfy</span>
+    </div>
+
+    <input type="text" id="buscador" placeholder="¿Qué quieres reproducir?">
+
+    <button>Iniciar sesión</button>
+  </header>
+
+  <div class="contenido">
+
+    <!-- Playlists a la izquierda -->
+    <aside class="playlists">
+      <h3>Tu biblioteca</h3>
+      <ul>
+        <li>Canciones que te gustan</li>
+        <li>Playlist 1</li>
+        <li>Playlist 2</li>
+        <li>Playlist 3</li>
+        <li>Playlist 4</li>
+        <li>Mix diario</li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main>
+
+      <h2>Canciones top</h2>
+
+      <!-- Carrusel de canciones por paginas (sin JS, con radio buttons ocultos) -->
+      <div class="carrusel">
+        <input type="radio" name="pag-canciones" id="pag-c1" class="pagina-radio" checked>
+        <input type="radio" name="pag-canciones" id="pag-c2" class="pagina-radio">
+        <input type="radio" name="pag-canciones" id="pag-c3" class="pagina-radio">
+
+        <div class="pagina" id="grupo-c1">
+          <label for="pag-c3" class="flecha flecha-izq">‹</label>
+          <div class="fila">
+            <a class="cancion" href="https://open.spotify.com/embed/track/4woTEX1wYOTGDqNXuavlRC?utm_source=generator&theme=0&autoplay=1" target="reproductor">
+              <img src="img/cancion1.jpg" alt="Cancion 1">
+              <p>Cancion 1</p>
+            </a>
+            <a class="cancion" href="https://open.spotify.com/embed/track/7lQ8MOhq6IN2w8EYcFNSUk?utm_source=generator&theme=0&autoplay=1" target="reproductor">
+              <img src="img/cancion2.jpg" alt="Cancion 2">
+              <p>Cancion 2</p>
+            </a>
+            <a class="cancion" href="https://open.spotify.com/embed/track/0INtJm8gCJKtNaAYQNVlpZ?utm_source=generator&theme=0&autoplay=1" target="reproductor">
+              <img src="img/cancion3.jpg" alt="Cancion 3">
+              <p>Cancion 3</p>
+            </a>
+          </div>
+          <label for="pag-c2" class="flecha flecha-der">›</label>
+        </div>
+
+        <div class="pagina" id="grupo-c2">
+          <label for="pag-c1" class="flecha flecha-izq">‹</label>
+          <div class="fila">
+            <a class="cancion" href="https://open.spotify.com/embed/track/1p2ea5Dy0tOnt9q4wfy4aX?utm_source=generator&theme=0&autoplay=1" target="reproductor">
+              <img src="img/cancion4.jpg" alt="Cancion 4">
+              <p>Cancion 4</p>
+            </a>
+            <a class="cancion" href="https://open.spotify.com/embed/track/2igwFfvr1OAGX9SKDCPBwO?utm_source=generator&theme=0&autoplay=1" target="reproductor">
+              <img src="img/cancion5.jpg" alt="Cancion 5">
+              <p>Cancion 5</p>
+            </a>
+            <a class="cancion" href="https://open.spotify.com/embed/track/4fxF8ljwryMZX5c9EKrLFE?utm_source=generator&theme=0&autoplay=1" target="reproductor">
+              <img src="img/cancion6.jpg" alt="Cancion 6">
+              <p>Cancion 6</p>
+            </a>
+          </div>
+          <label for="pag-c3" class="flecha flecha-der">›</label>
+        </div>
+
+        <div class="pagina" id="grupo-c3">
+          <label for="pag-c2" class="flecha flecha-izq">‹</label>
+          <div class="fila">
+            <a class="cancion" href="https://open.spotify.com/embed/track/09m1TcymsKszj3ito4Hmp7?utm_source=generator&theme=0&autoplay=1" target="reproductor">
+              <img src="img/cancion7.jpg" alt="Cancion 7">
+              <p>Cancion 7</p>
+            </a>
+            <a class="cancion" href="https://open.spotify.com/embed/track/7bxaFZ1O3cHkgLKMsdC3xR?utm_source=generator&theme=0&autoplay=1" target="reproductor">
+              <img src="img/cancion8.jpg" alt="Cancion 8">
+              <p>Cancion 8</p>
+            </a>
+            <a class="cancion" href="https://open.spotify.com/embed/track/6K4t31amVTZDgR3sKmwUJJ?utm_source=generator&theme=0&autoplay=1" target="reproductor">
+              <img src="img/cancion9.jpg" alt="Cancion 9">
+              <p>Cancion 9</p>
+            </a>
+          </div>
+          <label for="pag-c1" class="flecha flecha-der">›</label>
+        </div>
+      </div>
+
+      <h2>Artistas top</h2>
+
+      <!-- Carrusel de artistas por paginas (mismo truco, sin JS) -->
+      <div class="carrusel">
+        <input type="radio" name="pag-artistas" id="pag-a1" class="pagina-radio" checked>
+        <input type="radio" name="pag-artistas" id="pag-a2" class="pagina-radio">
+
+        <div class="pagina" id="grupo-a1">
+          <label for="pag-a2" class="flecha flecha-izq">‹</label>
+          <div class="fila">
+            <div class="artista">
+              <img src="img/artista1.jpg" alt="Artista 1">
+              <p>Artista 1</p>
+            </div>
+            <div class="artista">
+              <img src="img/artista2.jpg" alt="Artista 2">
+              <p>Artista 2</p>
+            </div>
+            <div class="artista">
+              <img src="img/artista3.jpg" alt="Artista 3">
+              <p>Artista 3</p>
+            </div>
+            <div class="artista">
+              <img src="img/artista4.jpg" alt="Artista 4">
+              <p>Artista 4</p>
+            </div>
+          </div>
+          <label for="pag-a2" class="flecha flecha-der">›</label>
+        </div>
+
+        <div class="pagina" id="grupo-a2">
+          <label for="pag-a1" class="flecha flecha-izq">‹</label>
+          <div class="fila">
+            <div class="artista">
+              <img src="img/artista5.jpg" alt="Artista 5">
+              <p>Artista 5</p>
+            </div>
+            <div class="artista">
+              <img src="img/artista6.jpg" alt="Artista 6">
+              <p>Artista 6</p>
+            </div>
+            <div class="artista">
+              <img src="img/artista7.jpg" alt="Artista 7">
+              <p>Artista 7</p>
+            </div>
+          </div>
+          <label for="pag-a1" class="flecha flecha-der">›</label>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Reproductor a la derecha: siempre visible, con una cancion cargada por defecto -->
+    <aside class="reproductor">
+      <h3>Reproductor</h3>
+      <p>Sonando ahora:</p>
+
+      <!-- Este iframe tiene name="reproductor", que coincide con el
+           target="reproductor" de cada link de cancion. Por eso al
+           hacer clic en una cancion, se carga aqui, sin usar JavaScript.
+           Ya trae una cancion por defecto para que el reproductor
+           nunca se vea vacio. -->
+      <iframe
+        name="reproductor"
+        id="reproductor"
+        src="https://open.spotify.com/embed/track/4woTEX1wYOTGDqNXuavlRC?utm_source=generator&theme=0&autoplay=1"
+        width="100%"
+        height="152"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </aside>
+
+  </div>
+
+</body>
+</html>
